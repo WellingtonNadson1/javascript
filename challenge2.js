@@ -39,3 +39,8 @@ function multiplicar (a, b){
 }
 const r1 = calcular(3)(7)(subtrair);
 console.log(r1);
+
+
+
+const pot = (base) => (exp) => Math.pow(base, exp);
+console.log(pot(2)(5));
