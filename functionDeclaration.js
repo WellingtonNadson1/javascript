@@ -1,4 +1,4 @@
-// FUNCTION DELARATION
+// FUNCTION DECLARATION
 function declaration(){
     console.log('I am a function Declaration')
 }

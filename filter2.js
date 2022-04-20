@@ -1,5 +1,5 @@
 // Created my version of method Array.filter
-Array.prototype.myMap = function(fn){
+Array.prototype.myFilter = function(fn){
     const newArray = []
     for( let i = 0; i < this.length; i++){
         if (fn(this[i], i, this)){
