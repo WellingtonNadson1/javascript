@@ -2,8 +2,9 @@
 // Fetch API javascript
 
 const userName = 'wellingtonnadson1'
+const url = `https://api.github.com/users/${userName}`
 
-fetch(`https://api.github.com/users/${userName}`, {
+fetch(url, {
     method: 'GET',
     headers: {
         Accept: 'application/vnd.github.v3+json'
@@ -13,5 +14,8 @@ fetch(`https://api.github.com/users/${userName}`, {
     console.log(typeof response)
     return response.json()
 })
-.then((data) => console.log(data.bio))
+.then((data) => {
+    const $title = document.querySelector('h1')
+    $title.insertAdjacentHTML("beforeend", `${data.name}`)
+})
 .catch((err) => console.log(`Ocorreu um erro: ${err}`))
